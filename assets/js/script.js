@@ -44,7 +44,7 @@ function resetSpeed() {
 
   setTimeout(function() {
   counterElement.style.color = "white"
-  container.style.border = "2px solid white";
+  container.style.border = "3px solid white";
 }, 200)
 }
 // Aggiungi event listener ai pulsanti
@@ -57,7 +57,7 @@ incrementButton.addEventListener('mousedown', function() {
   intervalId = setInterval(function() {
     increment();
     counterElement.style.color = "#f5f507"
-    container.style.border = "2px solid #f5f507"
+    container.style.border = "4px solid #f5f507"
     speedup();
     
   }, intervalDelay);
@@ -73,7 +73,7 @@ decrementButton.addEventListener('mousedown', function() {
   intervalId = setInterval(function() {
     decrement();
     counterElement.style.color = "#f5f507"
-    container.style.border = "2px solid #f5f507"
+    container.style.border = "4px solid #f5f507"
     speedup();
     
   }, intervalDelay);
@@ -86,7 +86,7 @@ resetCounterButton.addEventListener('click', function() {
   counterValue = 0;
   updateCounter();
   counterElement.style.color = "#ff0505";
-  container.style.border = "2px solid #ff0505";
+  container.style.border = "3px solid #ff0505";
   setTimeout(function() {
     counterElement.style.color = "white";
     container.style.border = "2px solid white";
