@@ -1,95 +1,68 @@
-// Seleziona gli elementi del DOM
-const container = document.querySelector('.value-container');
-const counterElement = document.getElementById('counter');
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-const resetCounterButton = document.getElementById('reset-counter');
+/* Set Counter Value */
 
-// Valore iniziale del counter
+function updateCounter(value) {
+    const counterElement = document.getElementById('counter');
+    counterElement.textContent = counterValue;
+}
+
 let counterValue = 0;
+updateCounter(counterValue);
 
-// Variabili per il controllo del tempo di incremento/decremento rapido
-let intervalId = null;
-let intervalDelay = 200;
-let intervalSpeedup = 0.8;
 
-// Funzione per aggiornare il valore del counter nel DOM
-function updateCounter() {
-  counterElement.textContent = counterValue;
-}
+/* Increment Value onclick*/
 
-// Incrementa il counter
-function increment() {
-  counterValue++;
-  updateCounter();
-  counterElement.style.color = "#f5f507"
-  container.style.border = "2px solid #f5f507"
-}
+document.getElementById('incrementBtn').addEventListener('click', function( ) {
+counterValue++;
+updateCounter(counterValue);
+})
 
-// Decrementa il counter
-function decrement() {
-  if (counterValue > 0) {
-    counterValue--;
-    updateCounter();
-    counterElement.style.color = "#f5f507"
-    container.style.border = "2px solid #f5f507"
+/* Continuous increment value */
+document.getElementById('incrementBtn').addEventListener('mousedown', function () {
+    incrementInterval = setInterval (function () {
+        counterValue++;
+        updateCounter(counterValue);
+    }, 200)
     
-  }
+})
+
+/* Stop continuous increment */
+
+document.getElementById('incrementBtn').addEventListener('mouseup', function () {
+    clearInterval(incrementInterval);
+})
+
+/* Decrement counter onclick until 0*/
+
+document.getElementById('decrementBtn').addEventListener('click', function( ) {
+    if( counterValue > 0) {
+        counterValue--;
+        updateCounter(counterValue);
 }
 
-// Funzione per fermare incremento/decremento
-function resetSpeed() {
-  clearInterval(intervalId);
-  intervalDelay = 200;
+})
 
-  setTimeout(function() {
-  counterElement.style.color = "white"
-  container.style.border = "3px solid white";
-}, 200)
+/* Continuous decrement value */
+
+document.getElementById('decrementBtn').addEventListener('mousedown', function () {
+    if (counterValue > 0) {
+        decrementInterval = setInterval(function () {
+            if (counterValue > 0) {
+                counterValue--;
+                updateCounter(counterValue);
+        }
+    }, 200)
 }
-// Aggiungi event listener ai pulsanti
+})
 
-//  Increment event
-incrementButton.addEventListener('mouseup', resetSpeed);
-incrementButton.addEventListener('mouseout', resetSpeed);
-incrementButton.addEventListener('mousedown', function() {
-  increment();
-  intervalId = setInterval(function() {
-    increment();
-    counterElement.style.color = "#f5f507"
-    container.style.border = "4px solid #f5f507"
-    speedup();
-    
-  }, intervalDelay);
+/* Stop continuous decrement */
 
-});
+document.getElementById('decrementBtn').addEventListener('mouseup', function () {
+    clearInterval(decrementInterval);
+})
 
+/* Reset counter */
 
-// Decrement event
-decrementButton.addEventListener('mouseup', resetSpeed);
-decrementButton.addEventListener('mouseout', resetSpeed);
-decrementButton.addEventListener('mousedown', function() {
-  decrement();
-  intervalId = setInterval(function() {
-    decrement();
-    counterElement.style.color = "#f5f507"
-    container.style.border = "4px solid #f5f507"
-    speedup();
-    
-  }, intervalDelay);
-  
-});
-
-
-// Counter reset event
-resetCounterButton.addEventListener('click', function() {
-  counterValue = 0;
-  updateCounter();
-  counterElement.style.color = "#ff0505";
-  container.style.border = "3px solid #ff0505";
-  setTimeout(function() {
-    counterElement.style.color = "white";
-    container.style.border = "2px solid white";
-  }, 200); // Delay di 200 millisecondi (0.2 secondi)
-  
-});
+document.getElementById('resetBtn').addEventListener('click', function () {
+    counterValue = 0;
+    updateCounter(counterValue);
+})
