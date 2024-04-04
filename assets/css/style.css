@@ -1,31 +1,43 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
 body {
   display: flex;
+  flex-direction: column;
+  gap: 130px;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
+  background-color: rgb(29, 29, 134);
 }
 
 .app-container {
   text-align: center;
+  width: 100%;
 }
 
 h1 {
-  color: red;
+  color: yellow;
+  font-size: 40px;
 }
 
 #counter {
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  color: white;
 }
 
 .button-container {
   margin-top: 20px;
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 button {
@@ -54,10 +66,17 @@ button {
 
 #incrementBtn,
 #decrementBtn {
-  background-color: rgb(252, 252, 140);
+  background-color: rgb(209, 252, 55);
+  color: rgb(29, 29, 134);
 }
 
 #incrementBtn:hover,
 #decrementBtn:hover {
   background-color: yellow;
+}
+
+footer {
+  color: yellow;
+  margin-bottom: -200px;
+  font-size: 24px;
 }
