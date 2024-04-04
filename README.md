@@ -2,7 +2,9 @@
 
 Hi, in this readme I will show you how I realized this counter application using HTML, CSS and JavaScript.
 
-<a href="https://brandijsen.github.io/Progetto-JS-BASICS-di-Andrea-Brandetti/" target="_blank">Here is the link</a>
+<a href="https://brandijsen.github.io/Progetto-JS-BASICS-di-Andrea-Brandetti/" target="_blank">Link for the app</a>
+<a href="https://github.com/brandijsen/Progetto-JS-BASICS-di-Andrea-Brandetti" target="_blank">Link for the Github repository</a>
+
 
 ## HTML Structure
 
