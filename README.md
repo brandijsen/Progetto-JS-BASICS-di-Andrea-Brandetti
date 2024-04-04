@@ -2,16 +2,45 @@
 
 Hi, in this readme I will show you how I realized this counter application using HTML, CSS and JavaScript.
 
+Link dell'applicazione
+
 ## HTML Structure
 
-We have an app container that includes: H1 (name of the app), a div that will contain the counter value and a div cointaing three buttons ("increase", "reset", "decrease").
-In the bottom of the page there is a footer with my signature.
+We have an app container that includes:
+
+- H1 with the title of the application;
+- "counter" div that will contain the counter value;
+- "button-container" div cointaing three buttons ("increase", "reset", "decrease").
+
+![Test Image](./assets/images/body.png)
 
 ## CSS Style
 
 For this project i chose a minimalist CSS style.
-Every text is written in "Poppins" sans-serif bold, and the background color is blue. Title and footer color is yellow as the "increase" and "decrease" buttons, "reset" button is red. When a button get hovered his color change. Counter value color is white.
+Every text is written in "Poppins" sans-serif bold, and the background color is blue. Title is yellow as the "increase" and "decrease" buttons, "reset" button is red. When a button get hovered his color change. Counter value color is white.
 
-## Javascript functions
+![Test Image](./assets/images/app.png)
+
+## Javascript functions:
+
+- We start defining "updateCounter" function and initializing "counterValue" variable.
 
 ![Test Image](./assets/images/setCounterValue.png)
+
+- Increment Function
+
+When the user press the button "+" the counter will rise until he release it.
+
+![Test Image](./assets/images/increment.png)
+
+- Decrement Function
+
+When the user press the button "-" the counter will fall until he release it. Of course, this is possible just if the counter value is higher than 0.
+
+![Test Image](./assets/images/decrement.png)
+
+- Reset Function
+
+When the user press the button "C" the counter will reset its value and it set on 0.
+
+![Test Image](./assets/images/reset.png)
