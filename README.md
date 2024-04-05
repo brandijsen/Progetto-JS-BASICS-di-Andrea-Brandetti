@@ -31,13 +31,14 @@ Every text is written in "Poppins" sans-serif bold, and the background color is 
 
 - Increment Function
 
-When the user press the button "+" the counter will rise until he release it.
-
+When the user press the "+" button the counter will rise until he release it, this is possible thanks to the "onclick"
+ and "mousedown" events. "mouseup" event will stop the counter.
+ 
 ![Test Image](./assets/images/increment.png)
 
 - Decrement Function
 
-When the user press the button "-" the counter will fall until he release it. Of course, this is possible just if the counter value is higher than 0.
+We use the same process for the "-" button. The counter will fall until the user release it. Of course, this is possible just if the counter value is higher than 0.  
 
 ![Test Image](./assets/images/decrement.png)
 
