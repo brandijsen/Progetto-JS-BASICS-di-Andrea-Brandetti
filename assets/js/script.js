@@ -17,7 +17,7 @@ updateCounter(counterValue);
 })
 
 /* Continuous increment value */
-document.getElementById('incrementBtn').addEventListener('mousedown', function () {
+document.getElementById('incrementBtn').addEventListener('touchstart', function () {
     incrementInterval = setInterval (function () {
         counterValue++;
         updateCounter(counterValue);
@@ -27,7 +27,7 @@ document.getElementById('incrementBtn').addEventListener('mousedown', function (
 
 /* Stop continuous increment */
 
-document.getElementById('incrementBtn').addEventListener('mouseup', function () {
+document.getElementById('incrementBtn').addEventListener('touchend', function () {
     clearInterval(incrementInterval);
 })
 
@@ -43,7 +43,7 @@ document.getElementById('decrementBtn').addEventListener('click', function( ) {
 
 /* Continuous decrement value */
 
-document.getElementById('decrementBtn').addEventListener('mousedown', function () {
+document.getElementById('decrementBtn').addEventListener('touchstart', function () {
     if (counterValue > 0) {
         decrementInterval = setInterval(function () {
             if (counterValue > 0) {
@@ -56,7 +56,7 @@ document.getElementById('decrementBtn').addEventListener('mousedown', function (
 
 /* Stop continuous decrement */
 
-document.getElementById('decrementBtn').addEventListener('mouseup', function () {
+document.getElementById('decrementBtn').addEventListener('touchend', function () {
     clearInterval(decrementInterval);
 })
 
