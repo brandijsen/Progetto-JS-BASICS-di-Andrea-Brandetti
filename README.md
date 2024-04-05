@@ -2,10 +2,11 @@
 
 Hi, in this readme I will show you how I realized this counter application using HTML, CSS and JavaScript.
 
-<a href="https://brandijsen.github.io/Progetto-JS-BASICS-di-Andrea-Brandetti/" target="_blank">Link for the app</a> <br/>
-<a href="https://github.com/brandijsen/Progetto-JS-BASICS-di-Andrea-Brandetti" target="_blank">Link for the Github repository</a>
+[Link for the app](https://brandijsen.github.io/Progetto-JS-BASICS-di-Andrea-Brandetti/){:target="\_blank"}
 
-## HTML Structure
+[Link for the Github repository](https://github.com/brandijsen/Progetto-JS-BASICS-di-Andrea-Brandetti){:target="\_blank"}
+
+## App Structure
 
 We have an app container that includes:
 
