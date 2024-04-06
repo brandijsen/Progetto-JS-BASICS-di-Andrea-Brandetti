@@ -10,15 +10,11 @@ Hi, in this readme I will show you how I realized this counter application using
 
 We have an app container that includes:
 
-- H1 with the title of the application;
+- h1 with the title of the application;
 - "counter" div that will contain the counter value;
-- "button-container" div containing three buttons ("increase", "reset", "decrease").
+- Three buttons ("increase", "reset", "decrease").
 
 I implemented this structure using the Javascript DOM manipulation.
-
-![Test Image](./assets/images/structure1.png)
-
-![Test Image](./assets/images/structure2.png)
 
 ## CSS Style
 
@@ -29,24 +25,15 @@ Every text is written in "Poppins" sans-serif bold, and the background color is 
 
 ## Javascript functions:
 
-- We start defining "updateCounter" function and initializing "counterValue" variable.
+After creating the container, I defined the app elements with an array of objects. Each object has the "type", "id", "textContent" properties. With the forEach cycle i created the elements (children) of the container (parent).
 
-![Test Image](./assets/images/setCounterValue.png)
+Now we can focus on the functionality of the app.
 
-- Increment Function
+We initializes a counter variable, her value is 0. Then we defines a function named updateCounter() to update the display of the counter on the webpage.
 
-When the user press the "+" button the counter will rise until he release it, this is possible thanks to the "onclick" and "mousedown" events. "mouseup" event will stop the counter.
+We give an event listener to the appContainer element to handle button clicks. When a button is clicked, it checks which button was clicked and performs the corresponding action:
 
-![Test Image](./assets/images/increment.png)
-
-- Decrement Function
-
-We use the same process for the "-" button. The counter will fall until the user release it. Of course, this is possible just if the counter value is higher than 0.
-
-![Test Image](./assets/images/decrement.png)
-
-- Reset Function
-
-When the user press the button "C" the counter will reset its value and it set on 0.
-
-![Test Image](./assets/images/reset.png)
+- If the 'incrementBtn' is clicked, counterValue is incremented.
+- If the 'decrementBtn' is clicked and counterValue is greater than 0, counterValue is decremented.
+- If the 'resetBtn' is clicked, counterValue is reset to 0.
+  After each button click, the updateCounter() function is called to reflect the updated count value on the webpage.
